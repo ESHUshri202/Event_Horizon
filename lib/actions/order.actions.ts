@@ -56,7 +56,7 @@ export const createOrder = async (order: CreateOrderParams) => {
 
     return JSON.parse(JSON.stringify(newOrder));
   } catch (error) {
-    handleError(error);
+    // handleError(error);
   }
 }
 
@@ -112,7 +112,7 @@ export async function getOrdersByEvent({ searchString, eventId }: GetOrdersByEve
 
     return JSON.parse(JSON.stringify(orders))
   } catch (error) {
-    handleError(error)
+    // handleError(error)
   }
 }
 
@@ -143,6 +143,6 @@ export async function getOrdersByUser({ userId, limit = 3, page }: GetOrdersByUs
 
     return { data: JSON.parse(JSON.stringify(orders)), totalPages: Math.ceil(ordersCount / limit) }
   } catch (error) {
-    handleError(error)
+    // handleError(error)
   }
 }
